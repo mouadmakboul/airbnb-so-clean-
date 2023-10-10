@@ -1,6 +1,6 @@
 package com.example.demo3.Entities.CommentaireEntity;
 
-import com.example.demo3.Entities.RatingEntity.RatingEntity;
+
 import com.example.demo3.Entities.ReservationEntity.ReservationEntity;
 import com.example.demo3.Entities.UserEntity.UserEntity;
 import jakarta.persistence.*;
@@ -19,10 +19,14 @@ public class CommentaireEntity {
     private String text;
     private Date sendDate;
 
+
+    private boolean way;
+
     private boolean seen;
     @OneToOne
+
     private UserEntity user;
-    @OneToOne
+    @ManyToOne
     private ReservationEntity reservation;
 
 

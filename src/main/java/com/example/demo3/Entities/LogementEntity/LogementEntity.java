@@ -1,10 +1,10 @@
 package com.example.demo3.Entities.LogementEntity;
 
+
 import com.example.demo3.Entities.CategoryEntity.CategoryEntity;
 import com.example.demo3.Entities.EmplacementEntity.EmplacementEntity;
 import com.example.demo3.Entities.EquipementEntity.EquipementEntity;
 import com.example.demo3.Entities.ImageEntity.ImageEntity;
-import com.example.demo3.Entities.PayementEntity.PayementEntity;
 import com.example.demo3.Entities.RatingEntity.RatingEntity;
 import com.example.demo3.Entities.ReservationEntity.ReservationEntity;
 import com.example.demo3.Entities.UserEntity.UserEntity;

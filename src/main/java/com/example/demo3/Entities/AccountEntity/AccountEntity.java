@@ -1,8 +1,12 @@
 package com.example.demo3.Entities.AccountEntity;
 
+
+
 import com.example.demo3.Entities.UserEntity.UserEntity;
 import jakarta.persistence.*;
 import lombok.Data;
+
+
 
 @Entity
 @Data

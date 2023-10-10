@@ -1,7 +1,8 @@
 package com.example.demo3.Entities.CategoryEntity;
 
+
+
 import com.example.demo3.Entities.LogementEntity.LogementEntity;
-import com.example.demo3.Entities.PayementEntity.PayementEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 

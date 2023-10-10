@@ -10,7 +10,8 @@ import com.example.demo3.Entities.UserEntity.Role;
 import com.example.demo3.Entities.UserEntity.UserEntity;
 import com.example.demo3.Repositories.RoleRepo;
 import com.example.demo3.Repositories.UserRepo;
-import com.example.demo3.Service.UserDetailsImpl;
+
+import com.example.demo3.Service.UserDetailsImp;
 import com.example.demo3.jwt.JwtUtils;
 import com.example.demo3.payload.request.LoginRequest;
 import com.example.demo3.payload.request.SignupRequest;
@@ -59,7 +60,7 @@ public class AuthController {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        UserDetailsImp userDetails = (UserDetailsImp) authentication.getPrincipal();
 
         ResponseCookie jwtCookie = jwtUtils.generateJwtCookie(userDetails);
 
@@ -130,6 +131,9 @@ public class AuthController {
 
 
         user.setRoles((Set<Role>) roles);
+        System.out.println(user.toString());
+
+
         userRepository.save(user);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));

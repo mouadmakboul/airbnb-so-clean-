@@ -1,5 +1,6 @@
 package com.example.demo3.config;
 
+
 import com.example.demo3.Service.UserDetailsServiceImpl;
 import com.example.demo3.jwt.AuthEntryPointJwt;
 import com.example.demo3.jwt.AuthTokenFilter;
@@ -63,7 +64,12 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/api/auth/**").permitAll()
+
                             .requestMatchers("/api/test/**").permitAll()
+                                .requestMatchers("/test").permitAll()
+                                .requestMatchers("/categories/**").permitAll()
+                                .requestMatchers("/commentaires/**").permitAll()
+
 //                            .requestMatchers("/api/auth/sigin").permitAll()
                             .anyRequest().authenticated()
                 );
