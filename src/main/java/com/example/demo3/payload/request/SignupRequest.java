@@ -3,7 +3,6 @@ package com.example.demo3.payload.request;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
 import java.util.Set;
 
 public class SignupRequest {
@@ -11,13 +10,13 @@ public class SignupRequest {
     @Size(min = 3, max = 20)
     private String username;
 
-//    @NotBlank
-//    @Size(max = 20)
-//    private String firstname;
-//
-//    @NotBlank
-//    @Size(max = 20)
-//    private String lastname;
+    @NotBlank
+    @Size(max = 20)
+    private String firstname;
+
+    @NotBlank
+    @Size(max = 20)
+    private String lastname;
 
     @NotBlank
     @Size(max = 50)
@@ -38,21 +37,21 @@ public class SignupRequest {
         this.username = username;
     }
 
-//    public String getFirstname() {
-//        return firstname;
-//    }
-//
-//    public void setFirstname(String firstname) {
-//        this.firstname = firstname;
-//    }
-//
-//    public String getLastname() {
-//        return lastname;
-//    }
-//
-//    public void setLastname(String lastname) {
-//        this.lastname = lastname;
-//    }
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
     public String getEmail() {
         return email;
@@ -76,5 +75,14 @@ public class SignupRequest {
 
     public void setRole(Set<String> role) {
         this.role = role;
+    }
+
+    public SignupRequest(String username, String firstname, String lastname, String email, String password) {
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+
+        this.password = password;
     }
 }

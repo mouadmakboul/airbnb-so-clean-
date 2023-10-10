@@ -99,6 +99,8 @@ public class AuthController {
         UserEntity user = new UserEntity(
                 signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
+                signUpRequest.getFirstname(),
+                signUpRequest.getLastname(),
                 encoder.encode(signUpRequest.getPassword()));
 
         Set<String> strRoles = signUpRequest.getRole();

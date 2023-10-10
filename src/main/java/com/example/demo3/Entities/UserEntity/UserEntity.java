@@ -37,13 +37,13 @@ public class UserEntity {
     @Size(max = 20)
     private String username;
 
-//    @NotBlank
-//    @Size(max = 20)
-//    private String firstname;
-//
-//    @NotBlank
-//    @Size(max = 20)
-//    private String lastname;
+   @NotBlank
+   @Size(max = 20)
+   private String firstname;
+
+   @NotBlank
+   @Size(max = 20)
+   private String lastname;
 
     @NotBlank
     @Size(max = 50)
@@ -75,13 +75,15 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(String username, String email, String password) {
-//        this.firstname= firstname;
-//        this.lastname= lastname;
+    public UserEntity(String username, String email,String firstname,String lastname, String password) {
+      this.firstname= firstname;
+       this.lastname= lastname;
         this.username = username;
         this.email = email;
         this.password = password;
     }
+
+
 
     public Long getId() {
         return id;
@@ -99,21 +101,21 @@ public class UserEntity {
         this.username = username;
     }
 
-//    public String getFirstname() {
-//        return firstname;
-//    }
-//
-//    public void setFirstname(String firstname) {
-//        this.firstname = firstname;
-//    }
-//
-//    public String getLastname() {
-//        return lastname;
-//    }
-//
-//    public void setLastname(String lastname) {
-//        this.lastname = lastname;
-//    }
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
     public String getEmail() {
         return email;
